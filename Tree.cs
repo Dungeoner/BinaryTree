@@ -24,7 +24,7 @@ namespace BinaryTree
             }
             else
             {
-                var compare = node.NodeValue.CompareTo(newNode.NodeValue);
+                var compare = newNode.NodeValue.CompareTo(node.NodeValue);
                 switch (compare)
                 {
                     case 1:

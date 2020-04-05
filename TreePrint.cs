@@ -11,15 +11,26 @@ namespace BinaryTree
     {
         public void Print(Tree<T> tree)
         {
+            Console.WriteLine("Tree  print:");
             Print(tree.RootNode);
         }
 
-        public void Print(Node<T> node)
+        public void Print(Node<T> node, int i = 1)
         {
-            Console.WriteLine("Tree print:");
             if (node != null) Console.WriteLine(node.NodeValue.ToString());
-            if (node.Right != null) Print(node.Right);
-            if (node.Left != null) Print(node.Left);
+            if (node.Right != null)
+            {
+                Console.WriteLine("R {0}", i);
+                i++;
+                Print(node.Right, i);
+            }
+
+            if (node.Left != null)
+            {
+                Console.WriteLine("L {0}", i);
+                i++;
+                Print(node.Left, i);
+            }
             
         }
     }
