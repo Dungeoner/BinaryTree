@@ -19,7 +19,8 @@ namespace BinaryTree
             Console.WriteLine("Tree print:");
             if (node != null) Console.WriteLine(node.NodeValue.ToString());
             if (node.Right != null) Print(node.Right);
-            if (node.Left !=null) Print(node.Left);
+            if (node.Left != null) Print(node.Left);
+            
         }
     }
 }

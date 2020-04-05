@@ -12,11 +12,8 @@ namespace BinaryTree
         {
             Tree<Student> Oak = new Tree<Student>();
             Oak.AddNode(new Student("A", "A", 24, 2));
-            Console.WriteLine("1");
             Oak.AddNode(new Student("B", "A", 22, 4));
-            Console.WriteLine("2");
             Oak.AddNode(new Student("C", "A", 24, 1));
-            Console.WriteLine("3");
             Oak.AddNode(new Student("D", "A", 24, 6));
             Oak.AddNode(new Student("E", "A", 24, 34));
             Oak.AddNode(new Student("F", "A", 24, 55));

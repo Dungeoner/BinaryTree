@@ -13,13 +13,11 @@ namespace BinaryTree
 
         public void AddNode(T value)
         {
-            AddNode(new Node<T>(value), RootNode);
+            AddNode( new Node<T>(value),ref RootNode);
         }
 
-        private void AddNode(Node<T> newNode, Node<T> node)
+        private void AddNode( Node<T> newNode,ref Node<T> node)
         {
-
-
             if (node == null)
             {
                 node = newNode;
@@ -30,10 +28,10 @@ namespace BinaryTree
                 switch (compare)
                 {
                     case 1:
-                        AddNode(newNode, node.Right);
+                        AddNode(newNode, ref node.Right);
                         break;
                     case -1:
-                        AddNode(newNode, node.Left);
+                        AddNode(newNode, ref node.Left);
                         break;
                     default: break;
                 }
