@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace BinaryTree
 {
-    class Node<T> where T : IComparable
+    public class Node<T> where T : IComparable
     {
         public Node(T value)
         {
             NodeValue = value;
         }
-        public T NodeValue { get; set; }
+        public T NodeValue { get; private  set; }
         public Node<T> Right;
         public Node<T> Left;
 

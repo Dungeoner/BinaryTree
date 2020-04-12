@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BinaryTree
 {
-    class Student : IComparable
+    public class Student : IComparable
     {
         public string Name { get; set; }
         public string Surname { get; set; }
@@ -16,7 +16,7 @@ namespace BinaryTree
         public Student(string name, string surname, int age, int point)
         {
             Name = name;
-            Surname = surname;
+            Surname = surname.Length <= 15 ? surname : "Surname";
             Age = age;
             Point = point;
 
@@ -25,17 +25,9 @@ namespace BinaryTree
         public int CompareTo(object obj)
         {
             Student student = (Student) obj;
-            if (this.Point > student.Point)
-            {
-                return 1;
-            }
-
-            if (this.Point < student.Point)
-            {
-                return -1;
-            }
-            else return 0;
+            return this.Point.CompareTo(student.Point) != 0 ? this.Point.CompareTo(student.Point) : this.Surname.CompareTo(student.Surname);
         }
+        
 
         public override string ToString()
         {
