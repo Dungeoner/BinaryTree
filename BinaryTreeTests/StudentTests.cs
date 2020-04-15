@@ -1,4 +1,5 @@
-﻿using BinaryTree;
+﻿using System;
+using BinaryTree;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace BinaryTreeTests
