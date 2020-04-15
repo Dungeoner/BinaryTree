@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BinaryTree
 {
@@ -24,7 +20,7 @@ namespace BinaryTree
         
         public int CompareTo(object obj)
         {
-            Student student = (Student) obj;
+            var student = (Student) obj;
             return this.Point.CompareTo(student.Point) != 0 ? this.Point.CompareTo(student.Point) : this.Surname.CompareTo(student.Surname);
         }
         

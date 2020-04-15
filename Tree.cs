@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BinaryTree
 {
@@ -33,7 +29,6 @@ namespace BinaryTree
                     case -1:
                         AddNode(newNode, ref node.Left);
                         break;
-                    default: break;
                 }
             }
 
